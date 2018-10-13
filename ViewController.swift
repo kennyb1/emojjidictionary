@@ -11,22 +11,20 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var TheLabel: UILabel!
-    var tapCount = 0
+    
+    @IBOutlet weak var Text1: UITextField!
+   
+    @IBOutlet weak var Text2: UITextField!
     @IBAction func Buttons(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 10 {
-           TheLabel.text = "Damn you just love tapping huh? Sheesh give it a break will ya?"
+        print(Text1.text as Any)
+        TheLabel.text = "Answer: \(Double(Text1.text!)! + Double(Text2.text!)!)"
+        
     }
-        if tapCount == 11 {
-            TheLabel.text = "Seriously. Stop"
-        }
-        func ButtonTapped(_ sender: Any) {
-        TheLabel.text = "Grape Ape rules"
-    }
-        func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         }
     }
 
-}
+
+
