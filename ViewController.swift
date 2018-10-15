@@ -9,22 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var TheLabel: UILabel!
     
     @IBOutlet weak var Text1: UITextField!
-   
+    
     @IBOutlet weak var Text2: UITextField!
     @IBAction func Buttons(_ sender: Any) {
-        print(Text1.text as Any)
-        TheLabel.text = "Answer: \(Double(Text1.text!)! + Double(Text2.text!)!)"
         
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       let addition = false
+        if addition {
+            TheLabel.text = "Answer: \(Double(Text1.text!)! + Double(Text2.text!)!)"
+            
+        } else { TheLabel.text = "Answer: \(Double(Text1.text!)! - Double(Text2.text!)!)"
         }
-    }
+        func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view, typically from a nib.
+        }
+}
 
 
 
+}
